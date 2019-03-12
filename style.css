@@ -1,0 +1,22 @@
+html {}
+
+:root {
+	--chocColor: #4d3719;
+}
+
+@font-face {
+	font-family: delight;
+	src: url("res/rotterdalle.ttf");
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--chocColor);
+}
+
+h1 {
+	font-family: delight;
+	color: white;
+	font-size: 400%;
+}
