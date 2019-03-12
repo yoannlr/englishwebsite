@@ -6,12 +6,33 @@
 	<title>Chocolate Masterrace</title>
 </head>
 
-<body>
+<body onload="genSquares();" id="body">
+	<img src="res/tabletCorner.png" id="corner"/>
 	<header>
 		<ul>
 			<li><a href="">Home</a></li>
 			<li><a href="">Shop</a></li>
 		</ul>
 	</header>
+
+	<main>
+		<h1>Willy Wonka Chocolate Factory</h1>
+		<p>This text is useless. I don't know why you are reading this currently. But hey, that's pretty cool isn't it ?</p>
+	</main>
 </body>
+
+<script>
+	function genSquares() {
+		var bod = document.getElementById("body");
+		var tab = [];
+		for(var i = 0; i < 5; i++) {
+			tab[i] = document.createElement("img");
+			tab[i].src = "res/chunk.png";
+			tab[i].className = "square";
+			bod.appendChild(tab[i]);
+			tab[i].style.left = Math.floor(Math.random() * bod.offsetWidth - tab[i].width)  + "px";
+			tab[i].style.top = Math.floor(Math.random() * bod.offsetHeight + 1)  + "px";
+		}
+	}
+</script>
 </html>

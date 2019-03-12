@@ -5,7 +5,7 @@ html {}
 }
 
 @font-face {
-	font-family: rotterdalle;
+	font-family: delight;
 	src: url("res/rotterdalle.ttf");
 }
 
@@ -15,28 +15,20 @@ body {
 	background-color: var(--chocColor);
 }
 
-#corner {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
-
-.square {
-	position: absolute;
-	z-index: -1;
-}
-
 header {
+	border: 1px solid red;
 	margin: 0 auto;
 	width: 50%;
 	overflow: hidden;
+	text-align: center;
 }
 
 header ul {
-	display: block;
 	list-style-type: none;
 	overflow: hidden;
 	margin: 0;
+	padding: 0;œ
+	border: 1px solid green;
 }
 
 header ul li {
@@ -46,24 +38,11 @@ header ul li {
 header ul li a {
 	display: inline-block;
 	padding: 1em;
-	color: white;
-	font-family: rotterdalle;
-	font-size: 150%;
-	text-decoration: none;
-
+	background-color: black;
 }
 
-header ul li a:hover {
-	transition: color 1s ease-in-out;
-	color: yellow;
-}
-
-main {
-	margin: 0 auto;
-	width: 40%;
-	color: white;
-}
-
-main h1 {
+h1 {
 	font-family: delight;
+	color: white;
+	font-size: 400%;
 }
