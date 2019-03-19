@@ -9,10 +9,17 @@ html {}
 	src: url("res/rotterdalle.ttf");
 }
 
+@font-face {
+	font-family: varelaround;
+	src: url("res/VarelaRound-Regular.ttf")
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	background-color: var(--chocColor);
+	font-family: varelaround;
+	overflow: hidden;
 }
 
 #corner {
@@ -64,6 +71,18 @@ main {
 	color: white;
 }
 
-main h1 {
-	font-family: delight;
+footer {
+	margin-top: 5em;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	margin-left: 20%;
+}
+
+footer td {
+	padding: 1em;
+}
+
+footer a {
+	color: inherit;
 }
