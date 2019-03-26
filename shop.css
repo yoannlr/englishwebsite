@@ -1,10 +1,5 @@
 html {}
 
-:root {
-	--chocColor: #4d3719;
-	--darkChocColor: #3c2608;
-}
-
 @font-face {
 	font-family: rotterdalle;
 	src: url("res/rotterdalle.ttf");
@@ -18,14 +13,8 @@ html {}
 body {
 	margin: 0;
 	padding: 0;
-	background-color: var(--chocColor);
+	background-color: white;
 	font-family: varelaround;
-}
-
-#corner {
-	position: fixed;
-	right: 0;
-	bottom: 0;
 }
 
 header {
@@ -48,7 +37,7 @@ header ul li {
 header ul li a {
 	display: inline-block;
 	padding: 1em;
-	color: white;
+	color: black;
 	font-family: rotterdalle;
 	font-size: 150%;
 	text-decoration: none;
@@ -57,62 +46,51 @@ header ul li a {
 
 header ul li a:hover {
 	transition: color 1s ease-in-out;
-	color: yellow;
+	color: gray;
 }
 
 main {
 	margin: 0 auto;
-	width: 45%;
+	width: 75%;
 	color: white;
-	margin-bottom: 11em;
+	margin-bottom: 1em;
+	color: black;
 }
 
 main h1 {
 	text-align: center;
 }
 
-main .carousselControls {
-	margin: 2em auto;
+main > div {
+	border: 1px dashed gray;
+	background-color: #f5f5f5;
 	overflow: hidden;
-	display: table;
+	margin: 2em 0;
 }
 
-main .carousselControls .arrow {
-	margin-top: 170px;
-}
-
-main .carousselControls * {
+main div img, main div div {
 	float: left;
 }
 
-main .caroussel {
-	overflow: hidden;
-	width: 640px;
+main div div {
+	margin-left: 1em;
+	border: none;
 }
 
-main .caroussel #slides {
-	width: calc(640px * 3);
-}
-
-main .caroussel img {
-	float: left;
+main div:hover {
+	background-color: #eeeeee;
 }
 
 footer {
-	color: white;
-	background-color: var(--darkChocColor);
-	position: fixed;
-	bottom: 0;
+	border-top: 1px solid black;
+	background-color: white;
+	color: black;
 	width: 100%;
 	height: 10em;
 }
 
 footer > table {
-	margin-left: 5%;
-}
-
-footer > table > table tr {
-	border: 1px solid red;
+	margin: 0 auto;
 }
 
 footer td {

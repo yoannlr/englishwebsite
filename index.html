@@ -6,50 +6,80 @@
 	<title>Chocolate Masterrace</title>
 </head>
 
-<body onload="genSquares();" id="body">
-	<img src="res/tabletCorner.png" id="corner"/>
+<body>
 	<header>
 		<ul>
 			<li><a href="">Home</a></li>
-			<li><a href="">Shop</a></li>
+			<li><a href="shop.html">Shop</a></li>
 		</ul>
 	</header>
 
 	<main>
-		<h1>Willy Wonka's Chocolate Factory</h1>
-		<p>This text is useless. I don't know why you are reading this currently. But hey, that's pretty cool isn't it ?</p>
+		<h1>~ Welcome ~</h1>
+		<div class="carousselControls">
+			<img class="arrow" src="res/arrowPrev.png" onclick="prevFrame();" />
+			<div class="caroussel">
+				<div id="slides">
+					<img src="res/img0.png" />
+					<img src="res/img1.png" />
+					<img src="res/img2.png" />
+				</div>
+			</div>
+			<img class="arrow" src="res/arrowNext.png" onclick="nextFrame();" />
+		</div>
 
-		<h2>Our knowledge</h2>
-		<p>We put together the best cocoa beans currently available on the market yeah.</p>
+		<div style="width: 640px; margin: 0 auto;">
+			<h2>Far product</h2>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate.</p>
+			<p>This well known chocolate egg is perfect for easter. We use our savoir-faire in order to provide you the best possible experience tasting this incredible chocolate. blop</p>
+		</div>
 	</main>
 
-	<footer>
-		<table border="0">
-			<tr>
-				<td>
-					<p>Willy Wonka's Chocolate Factory</p>
-					<p><a href="mailto:">Contact us</a></p>
-				</td>
-				<td>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d157.2482172245465!2d-1.3963238236765976!3d50.90574390118671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4874714ca49e3949%3A0x7c4fadbe0866cc3c!2sBiglands+Bakery!5e0!3m2!1sfr!2sfr!4v1552985180927" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</td>
-			</tr>
-		</table>
-	</footer>
-</body>
+	<script>
+		frame = 0;
 
-<script>
-	function genSquares() {
-		var bod = document.getElementById("body");
-		var tab = [];
-		for(var i = 0; i < 5; i++) {
-			tab[i] = document.createElement("img");
-			tab[i].src = "res/chunk.png";
-			tab[i].className = "square";
-			bod.appendChild(tab[i]);
-			tab[i].style.left = Math.floor(Math.random() * bod.offsetWidth - 3 * tab[i].width)  + "px";
-			tab[i].style.top = Math.floor(Math.random() * bod.offsetHeight + 1)  + "px";
+		function nextFrame() {
+			if(frame < 2) {
+				frame = frame + 1;
+				document.getElementById("slides").style.transform = "translateX(-" +  640 * frame + "px)";
+			}
 		}
-	}
-</script>
+
+		function prevFrame() {
+			if(frame > 0) {
+				frame = frame - 1;
+				document.getElementById("slides").style.transform = "translateX(-" +  640 * frame + "px)";
+			}
+		}
+	</script>
+
+        <footer>
+                <table border="0">
+                        <tr>
+                                <td>
+                                        <p>Willy Wonka's Chocolate Factory</p>
+                                        <p><a href="mailto:">Contact us</a></p>
+                                </td>
+                                <td>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d157.2482172245465!2d-1.3963238236765976!3d50.90574390118671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4874714ca49e3949%3A0x7c4fadbe0866cc3c!2sBiglands+Bakery!5e0!3m2!1sfr!2sfr!4v1552985180927" width="500" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </td>
+                                <td>
+                                        <table>
+                                                <tr><td>Mon</td><td>9:00AM - 6:00PM</td><td>Thu</td><td>1:00PM - 6:00PM</td></tr>
+                                                <tr><td>Tue</td><td>9:00AM - 6:00PM</td><td>Fri</td><td>9:00AM - 6:00PM</td></tr>
+                                                <tr><td>Web</td><td>9:00AM - 6:00PM</td><td>Sat</td><td>9:00AM - 12:00AM</td></tr>
+                                        </table>
+                                </td>
+                        </tr>
+                </table>
+        </footer>
+	<img src="res/tabletCorner.png" id="corner"/>
+</body>
 </html>
