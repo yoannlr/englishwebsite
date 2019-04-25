@@ -95,7 +95,7 @@ main .caroussel #slides {
 	width: calc(640px * 3);
 }
 
-main .caroussel img {
+main .caroussel #slides img {
 	float: left;
 }
 
@@ -117,35 +117,59 @@ footer div {
 	padding: 0 1em;
 }
 
-footer div table td {
-	padding: 0 1em;
-}
-
 footer a {
 	color: inherit;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 	body {
-		width: 100%;
+		width: 100vw;
+	}
+
+	:root {
+		--chocColor: #4d3719;
+		--darkChocColor: #3c2608;
+	}
+
+	main {
+		padding: 0;
+		margin: 0;
+		width: 100vw;
 	}
 
 	#corner {
 		display: none;
 	}
 
-	.caroussel #slides img {
-		float: none;
-		width: 100%;
+	main .caroussel {
+		width: 100vw;
 	}
 
-	.caroussel #slides {
-		width: 640px;
-		margin: 0 auto;
+	main .caroussel #slides {
+		width: 100vw;
+	}
+
+	main .caroussel #slides img {
+		display: block;
+		float: none;
+		width: 100vw;
+	}
+
+	main .carousselControls .arrow {
+		display: none;
+	}
+
+	main > article {
+		padding: 1em;	
 	}
 
 	footer {
 		display: initial;
 		position: static;
+		background-color: var(--darkChocColor);
+	}
+
+	footer iframe {
+		display: none;
 	}
 }
