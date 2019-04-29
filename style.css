@@ -110,7 +110,11 @@ footer {
 }
 
 footer div:first-child {
-	margin: auto 5%;
+	margin: auto 8vw;
+}
+
+footer iframe {
+	width: 500px;
 }
 
 footer div {
@@ -164,12 +168,21 @@ footer a {
 	}
 
 	footer {
-		display: initial;
+		display: table;
 		position: static;
 		background-color: var(--darkChocColor);
+		text-align: center;
+	}
+
+	footer #map {
+		padding: 0;
 	}
 
 	footer iframe {
-		display: none;
+		width: 100vw;
+	}
+
+	footer p > p {
+		display: initial;
 	}
 }
