@@ -99,6 +99,10 @@ main .caroussel #slides img {
 	float: left;
 }
 
+main a {
+	color: inherit;
+}
+
 footer {
 	color: white;
 	background-color: var(--darkChocColor);
